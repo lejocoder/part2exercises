@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// part 2.2 exercises
+// part 2.2 exercises, works for 2.3 as well 
 
 // 0 acts as the sums, number would be the item for each iteration when we reduce
 const Course = (props) => {
