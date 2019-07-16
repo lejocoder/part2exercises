@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// part 2.1 exercises
+// part 2.2 exercises
 
 // 0 acts as the sums, number would be the item for each iteration when we reduce
 const Course = (props) => {
@@ -8,9 +8,12 @@ const Course = (props) => {
     return (
         <div>
             <h1>{props.course.name}</h1>
-            <p>
-                {myCourses.map(course => <p>{course.name + " " + course.exercises}</p>)}
-            </p>
+            <ul>
+                {myCourses.map(course => <li key = {course.id}>{course.name + " " + course.exercises}</li>)} 
+                <li key = "total"> total of {myCourses.reduce(function(sum, course) {
+                return sum + course.exercises
+              }, 0)} exercises  </li>
+            </ul>
             
         </div>
     )
